@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://7a6ay3xlfnc5"]
 
+[ext_resource type="Script" uid="uid://tffmdtq7hjx7" path="res://player.gd" id="1_4flbx"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrivr"]
 radius = 0.3
 height = 1.7
@@ -9,6 +11,7 @@ radius = 0.3
 height = 1.7
 
 [node name="Player" type="CharacterBody3D" unique_id=1234835183]
+script = ExtResource("1_4flbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=303679136]
 shape = SubResource("CapsuleShape3D_xrivr")
