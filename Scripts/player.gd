@@ -28,18 +28,16 @@ func _physics_process(delta: float) -> void:
 	var direction = Vector3.ZERO;
 	
 	var forward = -transform.basis.z;
-	var back = transform.basis.z;
 	var right = transform.basis.x;
-	var left = -transform.basis.x;
 	
 	if Input.is_action_pressed("move_forward"):
 		direction += forward;
 	if Input.is_action_pressed("move_back"):
-		direction -= back;
+		direction -= forward;
 	if Input.is_action_pressed("move_right"):
 		direction += right;
 	if Input.is_action_pressed("move_left"):
-		direction -= left;
+		direction -= right;
 		
 	direction = direction.normalized();
 	

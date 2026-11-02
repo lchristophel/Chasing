@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bulnmws50ar42"]
+
+[ext_resource type="PackedScene" uid="uid://7a6ay3xlfnc5" path="res://Scenes/player.tscn" id="1_f3sb7"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xrivr"]
+size = Vector2(25, 25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
+size = Vector3(25, 0.1, 25)
+
+[node name="World" type="Node3D" unique_id=1460649298]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=729298065]
+mesh = SubResource("PlaneMesh_xrivr")
+
+[node name="Player" parent="." unique_id=1234835183 instance=ExtResource("1_f3sb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1488867488]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1120885371]
+shape = SubResource("BoxShape3D_xrivr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=36000367]
+transform = Transform3D(0.96156204, 0, 0.27458772, -0.2725607, 0.121283494, 0.9544637, -0.03330296, -0.9926179, 0.116621606, 0, 4.8852673, 0)
